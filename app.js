@@ -1,9 +1,5 @@
-let arr = [20, 30, 40, 50, 100]
+let grades = [ 'A', 'Fail', 'Fail']
 
-let newarr = arr.filter((element) => {
-    if (element < 50) {
-        return true
-    }
-})
+let aGrades = grades.filter(element => element !== 'Fail')
 
-console.log(newarr)
+console.log(aGrades)
