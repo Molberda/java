@@ -1,11 +1,7 @@
-let grades = [ 'A', 'A+', 'Fail', 'B', 'C']
+let dollars = [1, 5, 10, 3]
 
-let goodGrades = []
+let cents = dollars.map ((element) => {
+    return element * 100
+})
 
-for ( let i = 0; i < grades.length; ++i) {
-    if (grades [i] !== 'Fail'){
-        goodGrades.push (grades[i])
-    }
-}
-
-console.log(goodGrades)
+console.log(cents)
