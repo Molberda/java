@@ -1,7 +1,0 @@
-.dark-theme{
-    background-color: black;
-}
-
-.dark-theme *{
-    filter: invert(1);
-}
