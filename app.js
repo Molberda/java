@@ -1,9 +1,31 @@
-const nameRef = document.querySelector(".name");
+const susRef = document.querySelector('.sus')
 
-async function main() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/3");
-  const data = await response.json();
-  nameRef.innerHTML = data.name;
+function getSuscriptionStatus (){
+  return new Promise ((resolve, reject) => {
+    resolve ('VIP')
+  })
+}
+
+function getVideo(suscriptionStatus){
+  return new Promise ((resolve, reject) => {
+    if (suscriptionStatus === "VIP"){
+      resolve ('show video')
+    }
+    if (suscriptionStatus === "FREE") {
+      resolve ('show trailer')
+    }
+    else{
+      reject('no video')  
+    }
+
+  })
+}
+
+async function main(){
+const status = await getSuscriptionStatus ()
+susRef.innerHTML = status
+console.log(await getVideo(status))
+
 }
 
 main ()
